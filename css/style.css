@@ -120,6 +120,8 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
+/****** Header logo et navigation *****/
 header{
     display: flex;
     justify-content: space-between;
@@ -133,7 +135,7 @@ header{
 }
 .logo img{
     max-width: 50%;
-    max-height: 70%;
+    max-height: 2em;
 }
 nav{
     margin-top: 0.7em;
@@ -149,6 +151,114 @@ nav a:hover{
     border-top: 0.3em #0065FC solid;
     color: #0065FC;
 }
+
+/********* Barre de recherches ********/
+.textrecherche {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.textrecherche h3{
+    margin-bottom: 0em;
+}
+.textrecherche p{
+    margin-top: 0.5em;
+}
+.Recherche form{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+    justify-content: flex-start;
+}
+
+.Recherche #location_dot i{
+    color: black;
+    font-size: 1em;
+    padding: 1.2em;
+    border-top-left-radius: 1.2em;
+    border-bottom-left-radius: 1.2em;
+    background-color: #F2F2F2;
+    padding-right: 1.3em;
+} 
+.Recherche input{
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+}
+.Recherche #place-search{
+    border-top: 0.1em #F2F2F2 solid;
+    border-bottom: 0.1em #F2F2F2 solid;
+    min-width: 10.5em;
+}
+.Recherche #place-search:focus{
+    outline: none;
+}
+.Recherche #rechercher_button{
+    background-color: #0065FC;
+    border-top: 0.1em #0065FC solid;
+    border-bottom: 0.1em #0065FC solid;
+    border-top-right-radius: 1.2em;
+    border-bottom-right-radius: 1.2em;
+    color: #F2F2F2;
+}
+/******** Filtres Recherche *****/
+.Filtres{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+}
+.Filtres button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    font-size: 1em;
+    font-weight: 600;
+    height: 3.2em;
+    background-color: transparent;
+    border: 0.15em #F2F2F2 solid;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+.Filtres button i{
+    margin-right: 0.5em;
+    font-size: 1.3em;
+}
+
+.Filtres button:hover{
+    background-color: #DEEBFF;
+    border: 0.15em #c8cdd5 solid;
+}
+/***** Commentaire recherches ***/
+.disponible{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.disponible i{
+    margin-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    font-size: 0.7em;
+    border: 0.1em #F2F2F2 solid;
+    border-radius: 3em;
+}
+
+
+
+
+
 
 
 
