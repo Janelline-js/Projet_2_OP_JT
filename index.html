@@ -32,7 +32,8 @@
                 <form>
                     <label for="place-search" id="location_dot"><i class="fa-solid fa-location-dot"></i></label>
                     <input type="search" id="place-search" name="q" placeholder="Marseille, France">
-                    <input type="submit" value="Rechercher" id="rechercher_button">
+                    <input type="submit" value="Rechercher" id="rechercher_button" class="input-recherche">
+                    <button type="submit" value="Rechercher" id="rechercher_button" class="loupe"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <div class="Filtres">
                     <h3>Filtres</h3>
@@ -57,7 +58,7 @@
             </section>
 
             <div class="hebergements-and-populaires">
-                <section class="hebergements">
+                <section class="hebergements" id="hebergements">
                     <h2 class="section-title">Hébergements</h2>
                     <div class="hebergements-cards">
                         <a href="#">
@@ -252,7 +253,7 @@
                     </div>
                 </section>
             </div>
-            <section class="activites">
+            <section class="activites" id="activites">
                 <h2 class="section-title">Activités à Marseille</h2>
                 <div class="activites-cards">
                     <a href="#">

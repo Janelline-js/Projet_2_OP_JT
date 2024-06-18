@@ -179,28 +179,33 @@ a {
 }
 
 .activites-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-rows: 25em;
     justify-content: center;
-    margin-top: 1em;
+    gap: 1.8em;
+    margin-top: 2em;
 }
-
+.activites h2 {
+    margin-left: 1.5em;
+}
 .activites-cards .card{
-    display: flex;
-    flex-direction: column;
-    width: 17em;
-    height: 25em;
-    margin: 1em;
+    display: grid;
+    grid-template-rows: 85%;
+    height: 100%;
     padding: 0;
 }
 .activites-cards .card-title {
     padding-left: 1em;
-    padding-top: 0.2em;
+    padding-right: 0.5em;
+    align-self: center;
 }
+
 
 .activites-cards img {
     border-radius: 1em 1em 0 0 ;
     width: 100%;
-    height: 85%;
+    height: 100%;
 }
 
 /****** Header logo et navigation *****/
@@ -216,15 +221,14 @@ header{
     
 }
 .logo img{
-    max-width: 50%;
-    max-height: 2em;
+    max-height: 1.1em;
 }
 nav{
-    margin-top: 0.7em;
+    margin-top: 1em;
 }
 nav a{
     border-top: 0.3em transparent solid;
-    padding-top: 1em;
+    padding-top: 0.8em;
     margin-left: 3em;
 
 
@@ -238,7 +242,7 @@ nav a:hover{
 
 .footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
     background-color: #F2F2F2;
     margin-top: 3em;
     margin-bottom: 3em;
@@ -284,14 +288,14 @@ nav a:hover{
 .Recherche #location_dot i{
     color: black;
     font-size: 1em;
-    padding: 1.2em;
-    border-top-left-radius: 1.2em;
-    border-bottom-left-radius: 1.2em;
+    padding: 1em;
+    border-top-left-radius: 0.9em;
+    border-bottom-left-radius: 0.9em;
     background-color: #F2F2F2;
-    padding-right: 1.3em;
+    padding-right: 1.1em;
 } 
 .Recherche input{
-    padding: 1em;
+    padding: 0.8em;
     font-size: 1em;
     font-weight: 600;
     border: none;
@@ -299,19 +303,19 @@ nav a:hover{
 .Recherche #place-search{
     border-top: 0.1em #F2F2F2 solid;
     border-bottom: 0.1em #F2F2F2 solid;
-    min-width: 10.5em;
+    width: 11em;
 }
 .Recherche #place-search:focus{
     outline: none;
 }
-.Recherche #rechercher_button{
+.Recherche .input-recherche{
     cursor: pointer;
     background-color: #0065FC;
-    border: 1em solid #0065FC ;
-    border-left: 0;
-    border-right: 0;
     border-radius: 0 1.2em 1.2em 0;
     color: #F2F2F2;
+}
+.Recherche .loupe {
+    display: none;
 }
 /******** Filtres Recherche *****/
 .Filtres, .boutons-filtres{
@@ -322,17 +326,18 @@ nav a:hover{
 }
 .boutons-filtres{
     margin-bottom: 0;
+    margin-left: 0.5em;
 }
 .Filtres button{
     display: flex;
     align-items: center;
     margin: 0.5em;
-    padding: 0 1.2em;
+    padding: 0 1em;
     font-size: 1em;
     font-weight: 600;
-    height: 3.2em;
+    height: 3em;
     background-color: transparent;
-    border: 0.15em #F2F2F2 solid;
+    border: 0.15em #e1e1e1 solid;
     border-radius: 2em;
 }
 .Filtres button i{
@@ -373,6 +378,8 @@ nav a:hover{
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
+    /******* Hébergements and Populaires Tablette *****/
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -403,20 +410,200 @@ nav a:hover{
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
-        
-    .activites-cards .card{
-        width: 11.5em;
-        height: 16em;
+
+    /***** Activités Tablette ****/
+
+    .activites-cards {
+        grid-template-rows: 78%;
     }
 
-    .activites-cards img {
-        width: 100%;
-        height: 75%;
+    .activites-cards .card {
+        grid-template-rows: 70%;
     }
 
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    .main-container {
+        padding: 0;
+    }
+
+/***** Hébergements & Populaires Portable *****/
+
+.hebergements-and-populaires section {
+    border-radius: 0;
+    background-color: unset;
+    padding: 1em;
+}
+.hebergements-and-populaires .populaires {
+    background-color: var(--main-bg-color);
+}
+
+/******* Hebergements ******/
+
+.hebergements {
+    order: 1;
+}
+
+.hebergements-cards {
+    margin: 0;
+    grid-template-rows: 13em 13em 13em 13em 13em 13em;
+    grid-template-columns: 1fr;
+}
+
+.hebergements-cards .card {
+    width: 100%;
+}
+
+.hebergements .more {
+    margin-top: 1em;
+}
+
+/********** Populaires Portable *****/ 
+
+.populaires-cards {
+    flex-direction: column;
+}
+
+.populaires-cards a {
+    width: 100%;
+}
+
+.populaires-cards .card {
+    margin-top: 1em;
+}
+
+
+/***** Activités Portable ****/
+    
+.activites-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1.2em;
+    margin-bottom: 2em;
+}
+
+.activites-cards .card {
+    height: 13em;
+}
+
+.activites-cards img {
+    height: 100%;
+}
+
+/***** Nav header Portable ****/
+
+header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+    
+header a {
+     
+}
+.logo {
+    margin-top: 1.5em;
+    padding: 0 ;
+    margin-bottom: 0.5em;
+}
+nav a{
+    width: 50%;
+    text-align: center;
+    border-top: none;
+    border-bottom: 0.3em #F2F2F2 solid;
+    padding-bottom: 1em;
+    margin-left: 0;
+}
+nav a:hover{
+    border-top: none;
+    border-bottom: 0.3em #0065FC solid;
+    color: #0065FC;
+}
+nav {
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+}
+
+/******** Footer Portable *****/
+
+.footer {
+    grid-template-columns: 1fr;
+    margin: 0;
+}
+
+/****** Formulaire Recherche Portable *******/
+
+.Recherche {
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.Recherche form {
+    align-self: center;
+}
+
+.Recherche .input-recherche{
+    display: none;
+}
+.Recherche .loupe {
+    display: block;
+    padding: 1em;
+    min-width: 4em;
+    cursor: pointer;
+    background-color: #0065FC;
+    border-radius: 1.2em;
+    border: none;
+    filter: drop-shadow(0em  0.4em 0.1em rgba(0, 0, 0, 0.2));
+}
+.Recherche .loupe i {
+    color: #F2F2F2;
+    font-size: medium;
+}
+
+
+.Recherche #place-search{
+    width: 100%;
+    min-width: 0;
+    padding: 0 1em;
+}
+
+.Recherche #location_dot i{
+    color: black;
+    font-size: medium;
+} 
+/******** Filtres Recherche Portable *****/
+
+.Filtres {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Filtres .boutons-filtres {
+    margin: 0;
+    align-self: center;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 3em 3em;
+    grid-template-columns: 50% 50%;
+    gap: 1em 0.5em ;
+}
+
+.Filtres button {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 80%;
+    
+}
+.disponible {
+    margin-bottom: 0;
+}
+
 }
